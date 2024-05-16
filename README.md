@@ -7,14 +7,21 @@ It is not an understatement to say that the modern-day lifestyle is supported by
 The project is composed of multiple jupyter notebook files. 
 
 ### 1. Load Dataset
+Input: JSON
+Output: CSV file (dataset_final.csv)
 This notebook loads the JSON file that contains the catalyst properties and extracts only the relevant portions. Since the dataset is in JSON format, it was reformatted into a pandas dataframe and also save as a csv file. Running the jupyter notebook will automatically generate a csv file. 
 
 ### 2. Clean Dataset
+Input: CSV file (dataset_final.csv)
+Output: CSV file (dataset_final_cleaned.csv)
 Because the dataset contains many irrelavant attributes and missing data, this jupyter notebook goes through each of them and cleans the dataset. Many attributes were omitted from the dataset and missing values were filled up using imputation. Finally, a full dataset with all possibly relevant attributes was made. 
 
 ### 3. Create Dataset
+Input: CSV file (dataset_final_cleaned.csv)
+Output: CSV file (dataset_2.csv)
 Using the full dataset created in the previous notebook, the data was further divided into dataset 1) which only contain information on the adsrobent, dataset 2) which contains information on both the adsorbent and catalyst, and dataset 3) which contain information on the adsorbent, catalyst, and the method. Upon analysis of the data using neural networks, dataset 2 predicted the adsorption energies the best and therefore dataset 2 was used for further analysis. 
 
 ### 4. Analyze Dataset 2
+Input: CSV file (dataset_final_cleaned.csv)
 Here, various machine learning models were applied to dataset 2. Specifically, traditional neural networks, linear regression, ridge regression, LASSO regression, decision trees, random forests, and SVM of various kernels were tested. 
 
